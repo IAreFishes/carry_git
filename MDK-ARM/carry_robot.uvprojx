@@ -458,6 +458,11 @@
               <FileType>1</FileType>
               <FilePath>../Src/gpio.c</FilePath>
             </File>
+            <File>
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\can.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -517,6 +522,11 @@
               <FileName>Pixy_Camera.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Pixy_Camera.c</FilePath>
+            </File>
+            <File>
+              <FileName>LightBand.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Moudle\LightBand.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -642,6 +652,11 @@
               <FileName>stm32f4xx_hal.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_can.c</FilePath>
             </File>
           </Files>
         </Group>

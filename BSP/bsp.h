@@ -10,13 +10,14 @@
 
 /* Includes ------------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "Motor_USE_TIM.h"
 #include "Pixy_Camera.h"
 #include "rbc_lcd.h"
 #include "AX-12A.h"
 #include "usart.h"
 #include "gpio.h"
 #include "tim.h"
-
+#include "can.h"
 
 
 /* Private function prototypes ---------------------------------------------------*/

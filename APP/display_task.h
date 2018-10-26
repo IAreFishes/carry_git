@@ -10,7 +10,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-
+#include "cmsis_os.h"
 /* Private function prototypes -----------------------------------------------*/
 
 void Display_Task(void const * argument);

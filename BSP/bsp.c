@@ -22,19 +22,22 @@ void BSP_Init(void)
 	MX_TIM4_Init();
 	MX_TIM5_Init();
 	MX_TIM9_Init();
+	/*灯板数据接收*/
+	MX_CAN1_Init();
 	//串口
   MX_USART1_UART_Init();
   MX_UART5_Init();
   MX_UART4_Init();
-	/*灯板数据接收*/
-  HAL_UART_Receive_IT(&huart1,Pixy_Temp,1);   //打开PIXY数据接受中断
-  HAL_UART_Receive_IT(&huart4,&Laser_buff,1);   //打开激光测距数据接受中断
+	//开启中断
+  HAL_UART_Receive_IT(&huart1,Pixy_Temp,1);  		  //打开PIXY数据接受中断
+  HAL_UART_Receive_IT(&huart4,&Laser_buff,1); 	  //打开激光测距数据接受中断
+	CAN_START_IT();																	//打开灯板数据中断
 	//led和lcd
   LED_Init();
   ROC_LCD_Init();
 	//舵机初始化
 	AX_Init();
-	//电机初始化
+	//底盘电机初始化
 	GUN_Init();
 	
 }

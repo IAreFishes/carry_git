@@ -39,6 +39,7 @@
 /* USER CODE BEGIN 0 */
 #include "Motor_USE_TIM.h"
 #include "Pixy_Camera.h"
+#include "LightBand.h"
 #include "AX-12A.h"
 
 /*Pixy±äÁ¿*/
@@ -65,6 +66,10 @@ extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 extern TIM_HandleTypeDef htim8;
 extern TIM_HandleTypeDef htim9;
+
+//µÆ´ø
+extern CAN_HandleTypeDef hcan1;
+
 /******************************************************************************/
 /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
 /******************************************************************************/
@@ -290,6 +295,22 @@ void UART5_IRQHandler(void)
   /* USER CODE END UART5_IRQn 1 */
 }
 
+
+/**
+* @brief This function handles CAN1 RX0 interrupts.
+*/
+void CAN1_RX0_IRQHandler(void)
+{
+  /* USER CODE BEGIN CAN1_RX0_IRQn 0 */
+
+  /* USER CODE END CAN1_RX0_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan1);
+  /* USER CODE BEGIN CAN1_RX0_IRQn 1 */
+
+  /* USER CODE END CAN1_RX0_IRQn 1 */
+}
+
+
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
@@ -457,6 +478,17 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
   }
 }
 
+
+void HAL_CAN_RxFifo0FullCallback(CAN_HandleTypeDef *hcan)
+{
+	if(hcan == &hcan1)
+	{
+		HAL_CAN_GetRxMessage(&hcan1,CAN_RX_FIFO0,&LightBand_Rx.can_rx,LightBand_Rx.data);
+		
+	}
+
+        
+}
 
 
 /**
