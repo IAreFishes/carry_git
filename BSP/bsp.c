@@ -12,11 +12,31 @@
 
 void BSP_Init(void)
 {
-  LED_Init();
-  ROC_LCD_Init();
+	//引脚
+	MX_GPIO_Init();
+	//定时器
+	MX_TIM1_Init();
+	MX_TIM8_Init();
+	MX_TIM2_Init();
+	MX_TIM3_Init();
+	MX_TIM4_Init();
+	MX_TIM5_Init();
+	MX_TIM9_Init();
+	//串口
+  MX_USART1_UART_Init();
+  MX_UART5_Init();
+  MX_UART4_Init();
+	/*灯板数据接收*/
   HAL_UART_Receive_IT(&huart1,Pixy_Temp,1);   //打开PIXY数据接受中断
   HAL_UART_Receive_IT(&huart4,&Laser_buff,1);   //打开激光测距数据接受中断
-//  HAL_UART_Receive_IT(&huart5,ch,7);  //AX-12A数据接受中断
+	//led和lcd
+  LED_Init();
+  ROC_LCD_Init();
+	//舵机初始化
+	AX_Init();
+	//电机初始化
+	GUN_Init();
+	
 }
 
 

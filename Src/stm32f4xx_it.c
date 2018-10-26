@@ -32,22 +32,22 @@
   */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "stm32f4xx.h"
 #include "stm32f4xx_it.h"
+#include "stm32f4xx.h"
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
+#include "Motor_USE_TIM.h"
 #include "Pixy_Camera.h"
 #include "AX-12A.h"
 
 /*Pixy变量*/
 uint8_t Re_Counter = 0;
 uint8_t ReSign_OK = 0;
-//extern uint8_t Pixy_Temp[18] = {0};
 static uint8_t USART1_FLAG = 0;	//通信标志
 
 /*激光测距变量*/
-float Distance = 0;				       //距离
+float Distance = 0;				 //距离
 uint8_t Laser_buff = 0;    //缓存
 
 
@@ -58,8 +58,13 @@ extern UART_HandleTypeDef huart4;
 extern UART_HandleTypeDef huart5;
 extern UART_HandleTypeDef huart1;
 
+//编码器
 extern TIM_HandleTypeDef htim1;
-
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim8;
+extern TIM_HandleTypeDef htim9;
 /******************************************************************************/
 /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
 /******************************************************************************/
@@ -168,7 +173,7 @@ void DebugMon_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-
+  HAL_IncTick();
   /* USER CODE END SysTick_IRQn 0 */
   osSystickHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
@@ -186,7 +191,7 @@ void SysTick_Handler(void)
 /**
 * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.
 */
-void TIM1_UP_TIM10_IRQHandler(void)
+void TIM1_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
 
@@ -195,6 +200,52 @@ void TIM1_UP_TIM10_IRQHandler(void)
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
 
   /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+}
+
+
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+
+  /* USER CODE END TIM2_IRQn 1 */
+}
+
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+
+  /* USER CODE END TIM3_IRQn 1 */
+}
+
+
+void TIM4_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM4_IRQn 0 */
+
+  /* USER CODE END TIM4_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim4);
+  /* USER CODE BEGIN TIM4_IRQn 1 */
+
+  /* USER CODE END TIM4_IRQn 1 */
+}
+
+void TIM9_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM9_IRQn 0 */
+
+  /* USER CODE END TIM9_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim9);
+  /* USER CODE BEGIN TIM9_IRQn 1 */
+
+  /* USER CODE END TIM9_IRQn 1 */
 }
 
 /**
@@ -405,5 +456,44 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
     SET_BIT(huart->Instance->CR1, USART_CR1_PEIE | USART_CR1_RXNEIE);
   }
 }
+
+
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM1 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+  int16_t motor_count;
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM1) {
+
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+	
+
+	if(htim->Instance == TIM5)
+	{
+		
+	  Motor_Count();
+    
+		//计数清零
+		__HAL_TIM_SET_COUNTER(&htim2,0);
+		__HAL_TIM_SET_COUNTER(&htim3,0);
+		__HAL_TIM_SET_COUNTER(&htim4,0);
+		__HAL_TIM_SET_COUNTER(&htim9,0);
+		
+	}
+  /* USER CODE END Callback 1 */
+}
+
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+
