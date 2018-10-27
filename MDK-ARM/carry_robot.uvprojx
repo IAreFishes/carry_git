@@ -10,6 +10,7 @@
       <TargetName>carry_robot</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -459,6 +460,11 @@
               <FileName>Omnidirectional_Wheel.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Omnidirectional_Wheel.c</FilePath>
+            </File>
+            <File>
+              <FileName>QR_Code.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Moudle\QR_Code.c</FilePath>
             </File>
           </Files>
         </Group>
