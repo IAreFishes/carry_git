@@ -108,7 +108,7 @@ void servo_change_angle(uint8_t id,int num,...)
 	{
 		float buff = 0;
 		
-		buff = va_arg(valist,double) * ANGLE;
+		buff = (float)(va_arg(valist,double) * ANGLE);
 		//等于0就不给对应位置的参数赋值
 		if(buff != 0)
 		{
@@ -135,7 +135,7 @@ void servo_change_angle(uint8_t id,int num,...)
 **/
 void servo_change_speed(uint8_t id,float buff )
 {
-	speed[id] = buff * RPM;	
+	speed[id] =(int)(buff * RPM);	
 }
 
 

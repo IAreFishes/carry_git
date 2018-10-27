@@ -484,7 +484,7 @@ void HAL_CAN_RxFifo0FullCallback(CAN_HandleTypeDef *hcan)
 	if(hcan == &hcan1)
 	{
 		HAL_CAN_GetRxMessage(&hcan1,CAN_RX_FIFO0,&LightBand_Rx.can_rx,LightBand_Rx.data);
-		
+		LightBand_TRHandler(LightBand_Rx);
 	}
 
         

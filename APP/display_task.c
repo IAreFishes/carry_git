@@ -35,20 +35,17 @@ void Display_Task(void const * argument)
 					
   for(;;)
   {
-//    LCD_Display_float(Pixy.Pixy_Color_Sig,1,1);
-//    LCD_Display_float(Pixy.Pixy_Color_PosX,1,2);
-//    LCD_Display_float(Pixy.Pixy_Color_PosY,1,3);
-    
-    
-
+		
+    LCD_Display_float(LB_1.id,1,1);
+		LCD_Display_float(LB_1.direction,1,2);
+		LCD_Display_float(LB_1.distance,1,3);
+		LCD_Display_float(LB_1.site,1,4);
 
     //LCD_Display_int(angle * 0.293,1,1);
 		
-//    Set_AX14(0x0,0xff);
-//    Set_AX11(0x0,0x3ff);
 
 
-//		 StablePose();	//0
+		//StablePose();	//0
 
      osDelay(5);
   }

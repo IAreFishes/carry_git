@@ -51,14 +51,14 @@
 typedef struct {
 	
 	CAN_TxHeaderTypeDef can_tx;
-	uint8_t data[8];
+	uint8_t data[4];
 
 }CAN_TX;
 
 typedef struct {
 	
 	CAN_RxHeaderTypeDef can_rx;
-	uint8_t data[8];
+	uint8_t data[4];
 
 }CAN_RX;
 	 

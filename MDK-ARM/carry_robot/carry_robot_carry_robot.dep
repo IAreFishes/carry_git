@@ -59,7 +59,7 @@ I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 I (../Inc/usart.h)(0x5BC327DA)
 I (../Inc/gpio.h)(0x5BC327D2)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (../Src/freertos.c)(0x5BCDDCEF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\freertos.o --omf_browse carry_robot\freertos.crf --depend carry_robot\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x5B594B76)
 I (F:\keil\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -78,7 +78,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5B594B76)
-F (../Src/stm32f4xx_it.c)(0x5BD32AC5)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\stm32f4xx_it.o --omf_browse carry_robot\stm32f4xx_it.crf --depend carry_robot\stm32f4xx_it.d)
+F (../Src/stm32f4xx_it.c)(0x5BD42A2A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\stm32f4xx_it.o --omf_browse carry_robot\stm32f4xx_it.crf --depend carry_robot\stm32f4xx_it.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5BD2DA26)
 I (../Inc/main.h)(0x5BC498EE)
@@ -135,8 +135,8 @@ I (F:\keil\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\rbc_lcd.h)(0x5BA61BD2)
 I (..\BSP\Pixy_Camera.h)(0x5BCF0A7B)
 I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
-I (..\Moudle\LightBand.h)(0x5BD3119D)
-I (../Inc/can.h)(0x5BD30F9C)
+I (..\Moudle\LightBand.h)(0x5BD42A09)
+I (../Inc/can.h)(0x5BD42A09)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 F (../Src/stm32f4xx_hal_msp.c)(0x5BC327DE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\stm32f4xx_hal_msp.o --omf_browse carry_robot\stm32f4xx_hal_msp.crf --depend carry_robot\stm32f4xx_hal_msp.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
@@ -202,7 +202,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5B594B66)
-F (..\BSP\bsp.c)(0x5BD30D91)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\bsp.o --omf_browse carry_robot\bsp.crf --depend carry_robot\bsp.d)
+F (..\BSP\bsp.c)(0x5BD42C96)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\bsp.o --omf_browse carry_robot\bsp.crf --depend carry_robot\bsp.d)
 I (..\BSP\bsp.h)(0x5BD2F963)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5BD2DA26)
@@ -262,7 +262,7 @@ I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 I (../Inc/usart.h)(0x5BC327DA)
 I (../Inc/gpio.h)(0x5BC327D2)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (..\Src\tim.c)(0x5BD2D5BF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\tim.o --omf_browse carry_robot\tim.crf --depend carry_robot\tim.d)
 I (../Inc/tim.h)(0x5BD2D5BF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
@@ -364,7 +364,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5B594B66)
 F (..\Src\can.c)(0x5BD30D91)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\can.o --omf_browse carry_robot\can.crf --depend carry_robot\can.d)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5BD2DA26)
 I (../Inc/main.h)(0x5BC498EE)
@@ -622,7 +622,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5B594B76)
 I (..\BSP\Pixy_Camera.h)(0x5BCF0A7B)
 I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
-F (..\Moudle\Mechanical_arm.c)(0x5BCC899A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\mechanical_arm.o --omf_browse carry_robot\mechanical_arm.crf --depend carry_robot\mechanical_arm.d)
+F (..\Moudle\Mechanical_arm.c)(0x5BD42D78)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\mechanical_arm.o --omf_browse carry_robot\mechanical_arm.crf --depend carry_robot\mechanical_arm.d)
 I (..\Moudle\Mechanical_arm.h)(0x5BD2D543)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5BD2DA26)
@@ -723,8 +723,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5B594B66)
-F (..\Moudle\LightBand.c)(0x5BD32AC1)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\lightband.o --omf_browse carry_robot\lightband.crf --depend carry_robot\lightband.d)
-I (..\Moudle\LightBand.h)(0x5BD3119D)
+F (..\Moudle\LightBand.c)(0x5BD42CEF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\lightband.o --omf_browse carry_robot\lightband.crf --depend carry_robot\lightband.d)
+I (..\Moudle\LightBand.h)(0x5BD42A09)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x5B594B60)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x5B594B60)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x5B594B64)
@@ -756,7 +756,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5B594B66)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5B594B66)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (..\APP\test_task.c)(0x5BCC849F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\test_task.o --omf_browse carry_robot\test_task.crf --depend carry_robot\test_task.d)
 I (..\APP\test_task.h)(0x5BD2D5BF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
@@ -846,8 +846,8 @@ I (..\BSP\Pixy_Camera.h)(0x5BCF0A7B)
 I (..\BSP\Motor_USE_TIM.h)(0x5BD2D5BF)
 I (../Inc/tim.h)(0x5BD2D5BF)
 I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
-F (..\APP\display_task.c)(0x5BD2D5BF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\display_task.o --omf_browse carry_robot\display_task.crf --depend carry_robot\display_task.d)
-I (..\APP\display_task.h)(0x5BD2F2DC)
+F (..\APP\display_task.c)(0x5BD42C04)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\display_task.o --omf_browse carry_robot\display_task.crf --depend carry_robot\display_task.d)
+I (..\APP\display_task.h)(0x5BD42C04)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5BD2DA26)
 I (../Inc/main.h)(0x5BC498EE)
@@ -894,6 +894,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x5B594B76)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x5B594B76)
+I (..\BSP\rbc_lcd.h)(0x5BA61BD2)
+I (..\Moudle\LightBand.h)(0x5BD42A09)
+I (../Inc/can.h)(0x5BD42A09)
 F (..\APP\correct_task.c)(0x5BC85F3D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\correct_task.o --omf_browse carry_robot\correct_task.crf --depend carry_robot\correct_task.d)
 I (..\APP\correct_task.h)(0x5BC8612C)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5B594B76)
@@ -955,7 +958,7 @@ I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 I (../Inc/usart.h)(0x5BC327DA)
 I (../Inc/gpio.h)(0x5BC327D2)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (..\APP\decision_task.c)(0x5BCC84CE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\decision_task.o --omf_browse carry_robot\decision_task.crf --depend carry_robot\decision_task.d)
 I (..\APP\decision_task.h)(0x5BC8612C)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5B594B76)
@@ -1017,7 +1020,7 @@ I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 I (../Inc/usart.h)(0x5BC327DA)
 I (../Inc/gpio.h)(0x5BC327D2)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (..\APP\location_task.c)(0x5BCC84D0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\location_task.o --omf_browse carry_robot\location_task.crf --depend carry_robot\location_task.d)
 I (..\APP\location_task.h)(0x5BC8612C)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x5B594B76)
@@ -1079,7 +1082,7 @@ I (..\BSP\Omnidirectional_Wheel.h)(0x5BD2D5BF)
 I (..\BSP\AX-12A.h)(0x5BC497E8)
 I (../Inc/usart.h)(0x5BC327DA)
 I (../Inc/gpio.h)(0x5BC327D2)
-I (../Inc/can.h)(0x5BD30F9C)
+I (../Inc/can.h)(0x5BD42A09)
 F (startup_stm32f407xx.s)(0x5BC327F2)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1" -I..\\Inc-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list startup_stm32f407xx.lst --xref -o carry_robot\startup_stm32f407xx.o --depend carry_robot\startup_stm32f407xx.d)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x5B594B66)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -I..\BSP -I..\APP -I..\Moudle-I D:\carry_git\MDK-ARM\RTE-I F:\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I F:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o carry_robot\stm32f4xx_hal_tim.o --omf_browse carry_robot\stm32f4xx_hal_tim.crf --depend carry_robot\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5B594B66)
