@@ -28,6 +28,8 @@ extern uint8_t Laser_buff;    //缓存
 /*AX-12A参数*/
 extern UART_HandleTypeDef huart5;
 extern uint8_t ch[20];
+/*二维码参数*/
+extern uint8_t QR_Buff[11];
 
 void BSP_Init(void);
 

@@ -9,8 +9,8 @@
 #include "planning.h"
 
 /* External variables --------------------------------------------------------*/
-static uint8_t  way_color[3] = {0};   //二维码扫描出的颜色顺序
-static uint8_t  color[3] = {0};       //从左到右扫描到的物块颜色顺序
+uint8_t  way_color[3] = {0};   //二维码扫描出的颜色顺序
+uint8_t  color[3] = {0};       //从左到右扫描到的物块颜色顺序
 uint8_t  goal_x[7] = {0};
 uint8_t  goal_y[7] = {0};      //生成的七个目标点的坐标顺序
 

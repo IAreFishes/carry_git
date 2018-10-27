@@ -41,7 +41,7 @@
 #include "Pixy_Camera.h"
 #include "LightBand.h"
 #include "AX-12A.h"
-
+#include "QR_Code.h"
 /*Pixy变量*/
 uint8_t Re_Counter = 0;
 uint8_t ReSign_OK = 0;
@@ -51,6 +51,8 @@ static uint8_t USART1_FLAG = 0;	//通信标志
 float Distance = 0;				 //距离
 uint8_t Laser_buff = 0;    //缓存
 
+/*二维码变量*/
+uint8_t QR_Buff[11] = {0};
 
 /* USER CODE END 0 */
 
@@ -70,6 +72,8 @@ extern TIM_HandleTypeDef htim9;
 //灯带
 extern CAN_HandleTypeDef hcan1;
 
+//二维码
+extern uint8_t way_color[3];
 /******************************************************************************/
 /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
 /******************************************************************************/
@@ -460,6 +464,21 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     HAL_UART_Receive_IT(&huart4,&Laser_buff,1);
     
  }
+  else if(huart->Instance == UART5)  //激光测距接收中断
+  {
+    if(QR_Buff[0] == 0x02 && QR_Buff[1] == 0x00 && QR_Buff[2] == 0x00 && QR_Buff[3] == 0x01 &&\
+       QR_Buff[4] == 0x00 && QR_Buff[5] == 0x33 && QR_Buff[6] == 0x31)
+    {
+      way_color[0] = QR_Buff[7] - 30;
+      way_color[1] = QR_Buff[8] - 30;
+      way_color[2] = QR_Buff[9] - 30;
+    }
+    else
+    {
+      Get_QRcode();
+    }
+      HAL_UART_Receive_IT(&huart4,QR_Buff,11);      
+  }
   
    
   
