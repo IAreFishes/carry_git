@@ -14,6 +14,8 @@ void BSP_Init(void)
 {
 	//引脚
 	MX_GPIO_Init();
+	//外部中断
+	 EXIT_Iint();
 	//定时器
 	MX_TIM1_Init();
 	MX_TIM8_Init();

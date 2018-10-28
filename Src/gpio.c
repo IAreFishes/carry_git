@@ -93,6 +93,26 @@ void LED_Init(void)
   
   HAL_GPIO_WritePin(GPIOB,GPIO_PIN_14,GPIO_PIN_RESET);
 }
+
+
+
+void EXIT_Iint(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct;
+	/*Configure GPIO pins : PAPin PAPin */
+  GPIO_InitStruct.Pin = QTI1_Pin|QTI2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 6, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 6, 0);
+  HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+
+}
 /* USER CODE END 2 */
 
 /**

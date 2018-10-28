@@ -64,6 +64,8 @@ osThreadId decision_taskHandle;
 osThreadId location_taskHandle;
 osThreadId test_taskHandle;
 osThreadId display_taskHandle;
+osThreadId run_taskHandle;
+
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/
@@ -77,6 +79,8 @@ extern void Decision_Task(void const * argument);
 extern void Location_Task(void const * argument);
 extern void Test_Task(void const * argument);
 extern void Display_Task(void const * argument);
+extern void Run_Task(void const * argument);
+
 /* USER CODE END FunctionPrototypes */
 
 /* Hook prototypes */
@@ -106,6 +110,9 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
+  osThreadDef(run_task, Run_Task, osPriorityHigh, 0, 128);
+  run_taskHandle = osThreadCreate(osThread(run_task), NULL);
+	
   osThreadDef(correct_task, Correct_Task, osPriorityHigh, 0, 128);
   correct_taskHandle = osThreadCreate(osThread(correct_task), NULL);
   

@@ -15,6 +15,7 @@
 #include "cmsis_os.h"
 #include "Pixy_Camera.h"
 #include "Motor_USE_TIM.h"
+#include "location_task.h"
 #include "Omnidirectional_Wheel.h"
 
 /* Private function prototypes -----------------------------------------------*/
@@ -27,12 +28,20 @@ typedef struct
 	int16_t motor_count[4];
 } GM_25_type;
 
+enum car_state
+{
+	x_pos = 1,
+	
+	x_nag,
+	
+	y_pos,
+	
+	y_nag
+		
+};
 
-extern uint8_t now_x;
-extern uint8_t now_y;
 
-void Run_Task(void const * argument);
-void Chassis_pid_init(void);
+extern enum car_state Car_State; 
 
 extern GM_25_type GM_25;
 extern GM_25_type GM_25_spd_set;
@@ -40,6 +49,9 @@ extern int16_t motor_count[4];//电机编码器计数
 extern uint8_t  goal_x[7];
 extern uint8_t  goal_y[7];      //生成的七个目标点的坐标顺序
 
+
+void Run_Task(void const * argument);
+void Chassis_pid_init(void);
 uint8_t Move_to(uint8_t num,uint8_t direction,uint16_t speed);
 
 

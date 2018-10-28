@@ -59,7 +59,12 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#define QTI1_Pin GPIO_PIN_1
+#define QTI1_GPIO_Port GPIOA
+#define QTI1_EXTI_IRQn EXTI1_IRQn
+#define QTI2_Pin GPIO_PIN_2
+#define QTI2_GPIO_Port GPIOA
+#define QTI2_EXTI_IRQn EXTI2_IRQn
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
@@ -70,6 +75,7 @@ void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 void LED_Init(void);
+void EXIT_Iint(void);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

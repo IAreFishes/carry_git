@@ -37,11 +37,14 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
+#include "location_task.h"
 #include "Motor_USE_TIM.h"
 #include "Pixy_Camera.h"
 #include "LightBand.h"
-#include "AX-12A.h"
+#include "cmsis_os.h"
 #include "QR_Code.h"
+#include "AX-12A.h"
+
 /*Pixy变量*/
 uint8_t Re_Counter = 0;
 uint8_t ReSign_OK = 0;
@@ -53,6 +56,13 @@ uint8_t Laser_buff = 0;    //缓存
 
 /*二维码变量*/
 uint8_t QR_Buff[11] = {0};
+
+/*任务通知使用任务句柄*/
+//osThreadId correct_taskHandle;
+//osThreadId decision_taskHandle;
+//osThreadId test_taskHandle;
+//osThreadId display_taskHandle;
+extern osThreadId location_taskHandle;
 
 /* USER CODE END 0 */
 
@@ -200,6 +210,34 @@ void SysTick_Handler(void)
 /**
 * @brief This function handles TIM1 update interrupt and TIM10 global interrupt.
 */
+
+/**
+* @brief This function handles EXTI line1 interrupt.
+*/
+void EXTI1_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI1_IRQn 0 */
+
+  /* USER CODE END EXTI1_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_1);
+  /* USER CODE BEGIN EXTI1_IRQn 1 */
+
+  /* USER CODE END EXTI1_IRQn 1 */
+}
+
+/**
+* @brief This function handles EXTI line2 interrupt.
+*/
+void EXTI2_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI2_IRQn 0 */
+
+  /* USER CODE END EXTI2_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_2);
+  /* USER CODE BEGIN EXTI2_IRQn 1 */
+
+  /* USER CODE END EXTI2_IRQn 1 */
+}
 void TIM1_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
@@ -543,6 +581,31 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		
 	}
   /* USER CODE END Callback 1 */
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	BaseType_t pxHigherPriorityTaskWoken;
+	if(GPIO_Pin == GPIO_PIN_1)
+	{
+		Qti1_flag[4] = Qti1_flag[3];
+		Qti1_flag[3] = Qti1_flag[2];
+		Qti1_flag[2] = Qti1_flag[1];
+		Qti1_flag[1] = Qti1_flag[0];
+		Qti1_flag[0] = QTI1;
+	}
+	else if(GPIO_Pin == GPIO_PIN_2)
+	{
+		Qti2_flag[4] = Qti2_flag[3];
+		Qti2_flag[3] = Qti2_flag[2];
+		Qti2_flag[2] = Qti2_flag[1];
+		Qti2_flag[1] = Qti2_flag[0];
+		Qti2_flag[0] = QTI2;
+	}
+	//发送定位任务的任务通知
+	vTaskNotifyGiveFromISR(location_taskHandle,&pxHigherPriorityTaskWoken);
+	//进行任务切换
+	portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);
 }
 
 /* USER CODE END 1 */
