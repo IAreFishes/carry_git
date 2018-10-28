@@ -11,13 +11,22 @@
 /* External variables --------------------------------------------------------*/
 extern Pixy_Color Pixy;
 
+
 pid_t pid_GM25_spd[4];
 GM_25_type GM_25_spd_set;
 GM_25_type GM_25;
 /* Internal variables --------------------------------------------------------*/
-
+#define SPEED 100
+#define X_DIRECTION 0
+#define Y_DIRECTION 1
 /* Private function prototypes -----------------------------------------------*/
-
+enum
+{
+  X_Pos = 1,
+  X_Neg = -1,
+  Y_Pos = 1,
+  Y_Neg = -1
+}Direction;
 
 
 void Chassis_pid_init(void)
@@ -74,4 +83,58 @@ void Run_Task(void const * argument)
   }
 }
 
+
+
+uint8_t Move_to(uint8_t num,uint8_t direction,uint16_t speed)
+{
+  uint8_t const first = direction;  //X方向移动优先，可改为Y_DIRECTION
+  uint8_t status = first;
+  switch(status)
+  {
+    case X_DIRECTION:
+          /*判断X方向*/
+          if(now_x - goal_x[num] > 0)
+            Direction = X_Neg;
+          else
+            Direction = X_Pos;
+          /*未到达指定X*/
+          if(now_x != goal_x[num])
+          {
+            GM_25_spd_set.dstVmmps_X = Direction * speed;
+          }
+          /*到达指定Y*/
+          else
+          {
+            /*停车进入下一阶段*/
+            if(status == first)  //第一步
+              status = !status;
+            else                 //第二步
+              status = 2;
+            GM_25_spd_set.dstVmmps_X = 0;
+          }
+          break;
+    case Y_DIRECTION:
+          /*判断Y方向*/
+          if(now_y - goal_y[num] > 0)
+            Direction = Y_Neg;
+          else
+            Direction = Y_Pos;
+          /*未到达指定Y*/
+          if(now_y != goal_y[num])
+          {
+            GM_25_spd_set.dstVmmps_Y = Direction * speed;
+          }
+          else
+          {
+            /*停车进入下一阶段*/
+            if(status == first)  //第一步
+              status = !status;
+            else                 //第二步
+              status = 2;
+            GM_25_spd_set.dstVmmps_Y = 0;
+          }
+          break;
+  }
+  return status; 
+}
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
