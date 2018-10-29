@@ -10,6 +10,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "cmsis_os.h"
+#include "AX-12A.h"
+
 /* Private function prototypes -----------------------------------------------*/
 
 void Test_Task(void const * argument);

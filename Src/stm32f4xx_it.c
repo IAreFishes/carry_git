@@ -238,6 +238,12 @@ void EXTI2_IRQHandler(void)
 
   /* USER CODE END EXTI2_IRQn 1 */
 }
+//×¢ÊÍ£º´ý¸ü¸Ä
+void TIM1_UP_TIM10_IRQHandler(void)
+{
+	  HAL_TIM_IRQHandler(&htim1);
+}
+
 void TIM1_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 0 */
