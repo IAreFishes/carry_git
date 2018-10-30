@@ -76,6 +76,7 @@ extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim7;
 extern TIM_HandleTypeDef htim8;
 extern TIM_HandleTypeDef htim9;
 
@@ -192,7 +193,7 @@ void DebugMon_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-  HAL_IncTick();
+	
   /* USER CODE END SysTick_IRQn 0 */
   osSystickHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
@@ -238,11 +239,7 @@ void EXTI2_IRQHandler(void)
 
   /* USER CODE END EXTI2_IRQn 1 */
 }
-//×¢ÊÍ£º´ý¸ü¸Ä
-void TIM1_UP_TIM10_IRQHandler(void)
-{
-	  HAL_TIM_IRQHandler(&htim1);
-}
+
 
 void TIM1_IRQHandler(void)
 {
@@ -288,6 +285,20 @@ void TIM4_IRQHandler(void)
   /* USER CODE BEGIN TIM4_IRQn 1 */
 
   /* USER CODE END TIM4_IRQn 1 */
+}
+
+/**
+* @brief This function handles TIM7 global interrupt.
+*/
+void TIM7_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM7_IRQn 0 */
+
+  /* USER CODE END TIM7_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim7);
+  /* USER CODE BEGIN TIM7_IRQn 1 */
+
+  /* USER CODE END TIM7_IRQn 1 */
 }
 
 void TIM9_IRQHandler(void)
@@ -521,7 +532,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     {
       Get_QRcode();
     }
-      HAL_UART_Receive_IT(&huart4,QR_Buff,11);      
+      HAL_UART_Receive_IT(&huart5,QR_Buff,11);      
   }
   
    
@@ -567,13 +578,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
   int16_t motor_count;
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM1) {
+  if (htim->Instance == TIM7) 
+	{
+		
+		HAL_IncTick();
 
   }
   /* USER CODE BEGIN Callback 1 */
-
-	
-
 	if(htim->Instance == TIM5)
 	{
 		
