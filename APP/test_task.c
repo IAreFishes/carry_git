@@ -16,13 +16,21 @@
 
 void Test_Task(void const * argument)
 {
-//	  AX_Init();
+
 
   for(;;)
   {
-//    HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_14);
-//    Set_AX8(0x200,0x1ff);
-    osDelay(500);
+		static uint8_t LED1_NUM = 0;
+		
+		if(LED1_NUM > 30)
+		{
+			HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+			LED1_NUM = 0;
+		}
+		
+		LED1_NUM++;
+
+    osDelay(10);
   }
 }
 

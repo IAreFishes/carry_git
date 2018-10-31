@@ -11,6 +11,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 #include "pid.h"
+#include "gpio.h"
 #include "rbc_lcd.h"
 #include "cmsis_os.h"
 #include "Pixy_Camera.h"

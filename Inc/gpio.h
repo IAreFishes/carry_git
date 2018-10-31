@@ -59,12 +59,32 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-#define QTI1_Pin GPIO_PIN_1
-#define QTI1_GPIO_Port GPIOA
-#define QTI1_EXTI_IRQn EXTI1_IRQn
-#define QTI2_Pin GPIO_PIN_2
-#define QTI2_GPIO_Port GPIOA
-#define QTI2_EXTI_IRQn EXTI2_IRQn
+#define QTI1_Pin 				GPIO_PIN_1
+#define QTI1_GPIO_Port  GPIOA
+#define QTI1_EXTI_IRQn  EXTI1_IRQn
+	 
+#define QTI2_Pin			  GPIO_PIN_2
+#define QTI2_GPIO_Port  GPIOA
+#define QTI2_EXTI_IRQn  EXTI2_IRQn
+	 
+#define LED1_Pin 				GPIO_PIN_14
+#define	LED1_GPIO_Port	GPIOE
+	 
+#define LED2_Pin 				GPIO_PIN_12
+#define	LED2_GPIO_Port	GPIOF
+	 
+#define LED3_Pin 				GPIO_PIN_11
+#define	LED3_GPIO_Port	GPIOF
+
+#define LED4_Pin 				GPIO_PIN_2
+#define	LED4_GPIO_Port	GPIOB
+
+#define LED5_Pin 				GPIO_PIN_1
+#define	LED5_GPIO_Port	GPIOB
+
+#define LED6_Pin 				GPIO_PIN_0
+#define	LED6_GPIO_Port	GPIOB
+
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */

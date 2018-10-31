@@ -49,7 +49,17 @@ void Run_Task(void const * argument)
 	
   for(;;)
   {
+		static uint8_t LED2_NUM = 0;
 		
+		if(LED2_NUM > 30)
+		{
+			HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
+			LED2_NUM = 0;
+		}
+		
+		LED2_NUM++;
+
+/*
    motor_move_setvmmps(wheel,GM_25_spd_set.dstVmmps_X,GM_25_spd_set.dstVmmps_Y,GM_25_spd_set.dstVmmps_W);
 
    for(int i=0;i<4;i++)
@@ -81,6 +91,7 @@ void Run_Task(void const * argument)
 			
 			
     LCD_Display_int(wheel[0],1,1);
+*/
     osDelay(5);
   }
 }

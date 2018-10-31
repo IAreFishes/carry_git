@@ -15,15 +15,15 @@ void BSP_Init(void)
 	//引脚
 	MX_GPIO_Init();
 	//外部中断
-	 EXIT_Iint();
+	EXIT_Iint();
 	//定时器
-//	MX_TIM1_Init();
-//	MX_TIM2_Init();
-//	MX_TIM3_Init();
-//	MX_TIM4_Init();
-//	MX_TIM5_Init();
-//	MX_TIM8_Init();
-//	MX_TIM9_Init();
+	MX_TIM1_Init();
+	MX_TIM2_Init();
+	MX_TIM3_Init();
+	MX_TIM4_Init();
+	MX_TIM8_Init();
+	MX_TIM9_Init();
+	MX_TIM5_Init(); //用于清空编码器
 	//CAN灯板数据接收
 	MX_CAN1_Init();
 	//串口

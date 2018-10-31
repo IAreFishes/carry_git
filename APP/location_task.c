@@ -32,8 +32,8 @@ extern enum car_state Car_State;
 /* Internal variables --------------------------------------------------------*/
 
 //定位任务获得的当前最新的坐标
-float x_now = 0;
-float y_now = 0;
+float x_now = 0.5; //初始值为0.5
+float y_now = 0.5;
 //qti状态的变换情况
 float Qti1_flag[5] = {0};
 float Qti2_flag[5] = {0};
@@ -150,11 +150,14 @@ void Location_Task(void const * argument)
 		NotifyVaule = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
 		if(NotifyVaule == 1)
 		{	
-		
+			
+			
 			switch(Car_State)
 			{
 				case x_pos:
 									{
+										HAL_GPIO_TogglePin(LED6_GPIO_Port,LED6_Pin);
+
 										/*匹配状态,检查是否过线，并返回定位状态*/
 										location_sate = X_Match(x_pos);
 									}

@@ -18,9 +18,17 @@ void Correct_Task(void const * argument)
 {
   for(;;)
   {
-    HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_14);
+		static uint8_t LED4_NUM = 0;
+		
+		if(LED4_NUM > 30)
+		{
+			HAL_GPIO_TogglePin(LED4_GPIO_Port,LED4_Pin);
+			LED4_NUM = 0;
+		}
+		
+		LED4_NUM++;
     
-    osDelay(500);
+    osDelay(10);
   }
 }
 
