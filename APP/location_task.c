@@ -29,14 +29,17 @@
 /* External variables --------------------------------------------------------*/
 //车身当前的运动状态
 extern enum car_state Car_State; 
+//任务句柄
+extern osThreadId location_taskHandle;
+
 /* Internal variables --------------------------------------------------------*/
 
 //定位任务获得的当前最新的坐标
 float x_now = 0.5; //初始值为0.5
 float y_now = 0.5;
 //qti状态的变换情况
-float Qti1_flag[5] = {0};
-float Qti2_flag[5] = {0};
+float Qti1_flag[5] = {White};
+float Qti2_flag[5] = {White};
 //标准情况下经过黑线的状态变化顺序
 float std_x[3] = {White,Black,White};			 				 //横线是单线
 float std_y[5] = {White,Black,White,Black,White};	 //纵线是双间隔线
@@ -56,7 +59,9 @@ uint8_t location_sate = Location_Ok;
 int  X_Match(enum car_state state)
 {
 	float unit = 0;
-
+	float *buff;
+	double intpart = 0;
+	
 	if(state == x_pos)//x正方向
 	{
 		unit = 0.5;
@@ -66,30 +71,24 @@ int  X_Match(enum car_state state)
 		unit = -0.5;		
 	}
 	
-	if(x_now - (int)x_now > 0) //表示有小数。用qti1来标示整数点q
+	if(modf(x_now,&intpart) == 0.5) //表示有小数。用qti1来标示整数点q
 	{
-		if(CMP_X(Qti1_flag) == 0) //为零表示匹配成功，过线
-		{
-			x_now += unit;
-			return Location_Ok;
-		}
-		else
-		{
-			//正在过线禁止打扰
-			return Location_Busy;
-		}
+		buff = Qti1_flag;
 	}
 	else		//qti2来标示小数点
 	{
-		if(CMP_X(Qti2_flag) == 0)
-		{
-			x_now += unit;
-			return Location_Ok;
-		}
-		else
-		{
-			return Location_Busy;
-		}
+		buff = Qti1_flag;
+	}
+	
+		if(CMP_X(buff) == 0) //为零表示匹配成功，过线
+	{
+		x_now += unit;
+		return Location_Ok;
+	}
+	else
+	{
+		//正在过线禁止打扰
+		return Location_Busy;
 	}
 }
 /*
@@ -145,13 +144,16 @@ int Y_Match(enum car_state state)
 void Location_Task(void const * argument)
 {
 	uint32_t NotifyVaule;
+	
+	static float test = 0;
+	
   for(;;)
   {
 		NotifyVaule = ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
 		if(NotifyVaule == 1)
 		{	
-			
-			
+			NotifyVaule = 0;
+			test = x_now - (int)x_now;
 			switch(Car_State)
 			{
 				case x_pos:

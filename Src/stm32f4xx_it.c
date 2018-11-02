@@ -615,6 +615,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	BaseType_t pxHigherPriorityTaskWoken;
+	
 	if(GPIO_Pin == GPIO_PIN_1)
 	{
 		Qti1_flag[4] = Qti1_flag[3];

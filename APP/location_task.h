@@ -12,6 +12,7 @@
 #include "cmsis_os.h"
 #include "string.h"
 #include "bsp.h"
+#include "math.h"
 /* Private function prototypes -----------------------------------------------*/
 
 //¶¨Î»×´Ì¬
